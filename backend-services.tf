@@ -18,8 +18,8 @@ resource "aws_db_instance" "vprofile-rds" {
   engine                 = "mysql"
   engine_version         = "5.7.37" # use v as 5.7.37 as it is available
   instance_class         = "db.t2.micro"
-  identifier             = "accounts"
-  db_name                   = "accounts" # add the identifier instead of name
+  identifier             = "accounts"  # simple name
+  db_name                   = "accounts" # used to add a databse named accounts in rds.
   username               = var.dbuser
   password               = var.dbpass
   parameter_group_name   = "default.mysql5.7" # use 5.7 default for 5.7 family verisons
